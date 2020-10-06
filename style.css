@@ -1,0 +1,114 @@
+/*
+    Simple Responsive JavaScript Image Slider
+    by Ayei Bithao
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing:border-box
+}
+
+section {
+    width: 80%;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+h1 {
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.imgGallery {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    flex-grow: 3;
+}
+
+div.slides {
+    cursor: pointer;
+}
+
+.img-sz {
+    width: 100%;
+} 
+
+
+/* Image Gallery Styles */
+
+div.img-window  {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-img {
+    max-width: 80vw;
+    max-height: 80vh;
+    z-index: 200;
+}
+
+/* Prev and Next Buttons */
+
+.img-btn-next {
+    position: fixed;
+    top: 48vh;
+    right: 0;
+    display: block;
+    font-size: 2rem;
+    padding: 10px 25px;
+    border-radius: 10px 0 0 10px;
+    z-index: 300;
+    background-color: #111111;
+    color: white;
+    cursor: pointer;
+}
+
+
+.img-btn-prev {
+    position: fixed;
+    top: 48vh;
+    left: 0;
+    display: block;
+    font-size: 2rem;
+    padding: 10px 25px;
+    border-radius: 0 10px 10px 0;
+    z-index: 300;
+    background-color: #111111;
+    color: white;
+    cursor: pointer;
+}
+
+.img-btn-close {
+    position: fixed;
+    top: 2vh;
+    left: auto;
+    display: block;
+    font-size: 2rem;
+    padding: 5px 10px 5px 10px;
+    border-radius: 50px;
+    z-index: 300;
+    background-color: #111111;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
